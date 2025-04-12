@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Vehicle - VSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>VSS</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rent-car.html">Rent a Car</a></li>
+                    <li><a href="list-car.html">List Your Car</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Complete Your Booking</h1>
+            <p>You're just a few steps away from your perfect ride</p>
+        </div>
+    </section>
+
+    <section class="booking-section">
+        <div class="container">
+            <div class="booking-container">
+                <div class="booking-car-details">
+                    <h2>Vehicle Details</h2>
+                    <div class="selected-car" id="selected-car">
+                        <!-- Vehicle details will be loaded dynamically -->
+                        <div class="car-image">
+                            <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=60" alt="Toyota Camry">
+                        </div>
+                        <div class="car-info-booking">
+                            <h3>Toyota Camry</h3>
+                            <div class="car-specs">
+                                <span><i class="fas fa-calendar-alt"></i> 2022</span>
+                                <span><i class="fas fa-car"></i> Sedan</span>
+                                <span><i class="fas fa-gas-pump"></i> Petrol</span>
+                                <span><i class="fas fa-cog"></i> Automatic</span>
+                            </div>
+                            <div class="car-features-booking">
+                                <span class="feature">Bluetooth</span>
+                                <span class="feature">Backup Camera</span>
+                                <span class="feature">Air Conditioning</span>
+                            </div>
+                            <div class="car-price-booking">
+                                <span class="price">₹3,500/day</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <div class="booking-steps">
+                        <div class="step active" id="step-1">
+                            <span class="step-number">1</span>
+                            <span class="step-text">Rental Details</span>
+                        </div>
+                        <div class="step" id="step-2">
+                            <span class="step-number">2</span>
+                            <span class="step-text">Driver Information</span>
+                        </div>
+                        <div class="step" id="step-3">
+                            <span class="step-number">3</span>
+                            <span class="step-text">Payment</span>
+                        </div>
+                        <div class="step" id="step-4">
+                            <span class="step-number">4</span>
+                            <span class="step-text">Confirmation</span>
+                        </div>
+                    </div>
+
+                    <form id="booking-form">
+                        <!-- Step 1: Rental Details -->
+                        <div class="form-step active" id="rental-details">
+                            <h3>Rental Details</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickup-location">Pickup Location</label>
+                                    <input type="text" id="pickup-location" required placeholder="Enter pickup location">
+                                </div>
+                                <div class="form-group">
+                                    <label for="dropoff-location">Drop-off Location</label>
+                                    <input type="text" id="dropoff-location" required placeholder="Enter drop-off location">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="pickup-date">Pickup Date & Time</label>
+                                    <input type="datetime-local" id="pickup-date" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="dropoff-date">Drop-off Date & Time</label>
+                                    <input type="datetime-local" id="dropoff-date" required>
+                                </div>
+                            </div>
+                            <div class="form-group additional-options">
+                                <label>Additional Options</label>
+                                <div class="checkbox-wrapper">
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="insurance">
+                                        <label for="insurance">Add Insurance Coverage (₹500/day)</label>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="gps">
+                                        <label for="gps">GPS Navigation (₹200/day)</label>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="child-seat">
+                                        <label for="child-seat">Child Seat (₹150/day)</label>
+                                    </div>
+                                    <div class="checkbox-group">
+                                        <input type="checkbox" id="additional-driver">
+                                        <label for="additional-driver">Additional Driver (₹300/day)</label>
+                                    </div>
+                                    <div class="checkbox-group motorcycle-option">
+                                        <input type="checkbox" id="helmet">
+                                        <label for="helmet">Extra Helmet (₹100/day)</label>
+                                    </div>
+                                    <div class="checkbox-group motorcycle-option">
+                                        <input type="checkbox" id="riding-gear">
+                                        <label for="riding-gear">Riding Gear (₹250/day)</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary next-step">Continue to Driver Information</button>
+                        </div>
+
+                        <!-- Step 2: Driver Information -->
+                        <div class="form-step" id="driver-information">
+                            <h3>Driver Information</h3>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="driver-name">Full Name</label>
+                                    <input type="text" id="driver-name" required placeholder="Enter your full name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="driver-email">Email Address</label>
+                                    <input type="email" id="driver-email" required placeholder="Enter your email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="driver-phone">Phone Number</label>
+                                    <input type="tel" id="driver-phone" required placeholder="Enter your phone number">
+                                </div>
+                                <div class="form-group">
+                                    <label for="driver-age">Age</label>
+                                    <input type="number" id="driver-age" min="18" max="99" required placeholder="Must be 18 or older">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="driver-address">Address</label>
+                                <textarea id="driver-address" rows="3" required placeholder="Enter your current address"></textarea>
+                            </div>
+                            
+                            <div class="license-verification">
+                                <h4>Driving License Verification</h4>
+                                <p class="important-note">Note: A valid driving license is required to rent a car</p>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="license-number">License Number</label>
+                                        <input type="text" id="license-number" required placeholder="Enter your driving license number">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="license-expiry">Expiry Date</label>
+                                        <input type="date" id="license-expiry" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="license-state">Issuing State</label>
+                                    <select id="license-state" required>
+                                        <option value="">Select State</option>
+                                        <option value="AP">Andhra Pradesh</option>
+                                        <option value="AR">Arunachal Pradesh</option>
+                                        <option value="AS">Assam</option>
+                                        <option value="BR">Bihar</option>
+                                        <option value="CG">Chhattisgarh</option>
+                                        <option value="GA">Goa</option>
+                                        <option value="GJ">Gujarat</option>
+                                        <option value="HR">Haryana</option>
+                                        <option value="HP">Himachal Pradesh</option>
+                                        <option value="JH">Jharkhand</option>
+                                        <option value="KA">Karnataka</option>
+                                        <option value="KL">Kerala</option>
+                                        <option value="MP">Madhya Pradesh</option>
+                                        <option value="MH">Maharashtra</option>
+                                        <option value="MN">Manipur</option>
+                                        <option value="ML">Meghalaya</option>
+                                        <option value="MZ">Mizoram</option>
+                                        <option value="NL">Nagaland</option>
+                                        <option value="OD">Odisha</option>
+                                        <option value="PB">Punjab</option>
+                                        <option value="RJ">Rajasthan</option>
+                                        <option value="SK">Sikkim</option>
+                                        <option value="TN">Tamil Nadu</option>
+                                        <option value="TG">Telangana</option>
+                                        <option value="TR">Tripura</option>
+                                        <option value="UP">Uttar Pradesh</option>
+                                        <option value="UK">Uttarakhand</option>
+                                        <option value="WB">West Bengal</option>
+                                        <option value="AN">Andaman and Nicobar Islands</option>
+                                        <option value="CH">Chandigarh</option>
+                                        <option value="DN">Dadra and Nagar Haveli and Daman and Diu</option>
+                                        <option value="DL">Delhi</option>
+                                        <option value="JK">Jammu and Kashmir</option>
+                                        <option value="LA">Ladakh</option>
+                                        <option value="LD">Lakshadweep</option>
+                                        <option value="PY">Puducherry</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="license-image">Upload License (Front & Back)</label>
+                                    <input type="file" id="license-image" accept="image/*" multiple required>
+                                    <small>Please upload clear images of both sides of your driving license</small>
+                                </div>
+                                <div class="form-group">
+                                    <label for="selfie">Upload Selfie with License</label>
+                                    <input type="file" id="selfie" accept="image/*" required>
+                                    <small>Please upload a clear selfie of yourself holding your driving license for verification</small>
+                                </div>
+                            </div>
+                            
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-secondary prev-step">Back</button>
+                                <button type="button" class="btn btn-primary next-step">Continue to Payment</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Payment -->
+                        <div class="form-step" id="payment-details">
+                            <h3>Payment Details</h3>
+                            <div class="booking-summary">
+                                <h4>Booking Summary</h4>
+                                <div class="summary-item">
+                                    <span>Car Rental (3 days)</span>
+                                    <span>₹10,500</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Insurance Coverage</span>
+                                    <span>₹1,500</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>GPS Navigation</span>
+                                    <span>₹600</span>
+                                </div>
+                                <div class="summary-item">
+                                    <span>Taxes & Fees (18% GST)</span>
+                                    <span>₹2,268</span>
+                                </div>
+                                <div class="summary-item total">
+                                    <span>Total Amount</span>
+                                    <span>₹14,868</span>
+                                </div>
+                            </div>
+
+                            <div class="payment-options">
+                                <h4>Select Payment Method</h4>
+                                <div class="payment-method">
+                                    <input type="radio" name="payment-method" id="credit-card" checked>
+                                    <label for="credit-card">Credit/Debit Card</label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" name="payment-method" id="upi">
+                                    <label for="upi">UPI</label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" name="payment-method" id="net-banking">
+                                    <label for="net-banking">Net Banking</label>
+                                </div>
+                                <div class="payment-method">
+                                    <input type="radio" name="payment-method" id="wallet">
+                                    <label for="wallet">Wallet</label>
+                                </div>
+                            </div>
+
+                            <div class="payment-form" id="credit-card-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="card-number">Card Number</label>
+                                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" maxlength="19">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="card-name">Cardholder Name</label>
+                                        <input type="text" id="card-name" placeholder="Name on card">
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry-date">Expiry Date</label>
+                                        <input type="text" id="expiry-date" placeholder="MM/YY" maxlength="5">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="password" id="cvv" placeholder="123" maxlength="3">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="payment-form" id="upi-form" style="display: none;">
+                                <div class="form-group">
+                                    <label for="upi-id">UPI ID</label>
+                                    <input type="text" id="upi-id" placeholder="yourname@upi">
+                                </div>
+                            </div>
+
+                            <div class="payment-form" id="net-banking-form" style="display: none;">
+                                <div class="form-group">
+                                    <label for="bank">Select Bank</label>
+                                    <select id="bank">
+                                        <option value="">Select Bank</option>
+                                        <option value="sbi">State Bank of India</option>
+                                        <option value="hdfc">HDFC Bank</option>
+                                        <option value="icici">ICICI Bank</option>
+                                        <option value="axis">Axis Bank</option>
+                                        <option value="kotak">Kotak Mahindra Bank</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="payment-form" id="wallet-form" style="display: none;">
+                                <div class="form-group">
+                                    <label for="wallet-type">Select Wallet</label>
+                                    <select id="wallet-type">
+                                        <option value="">Select Wallet</option>
+                                        <option value="paytm">Paytm</option>
+                                        <option value="phonepe">PhonePe</option>
+                                        <option value="amazonpay">Amazon Pay</option>
+                                        <option value="mobikwik">MobiKwik</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" id="terms-agree" required>
+                                <label for="terms-agree">I agree to the <a href="#">Terms and Conditions</a> and <a href="#">Rental Policy</a></label>
+                            </div>
+
+                            <div class="form-navigation">
+                                <button type="button" class="btn btn-secondary prev-step">Back</button>
+                                <button type="button" class="btn btn-primary next-step">Complete Booking</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Confirmation -->
+                        <div class="form-step" id="booking-confirmation">
+                            <div class="confirmation-message">
+                                <div class="confirmation-icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <h3>Booking Confirmed!</h3>
+                                <p>Your booking has been successfully confirmed. A confirmation email has been sent to your email address.</p>
+                                <div class="booking-details">
+                                    <h4>Booking Details</h4>
+                                    <p><strong>Booking ID:</strong> <span id="booking-id">REV12345678</span></p>
+                                    <p><strong>Car:</strong> Toyota Camry</p>
+                                    <p><strong>Pickup:</strong> <span id="pickup-summary">Mumbai, 15 Mar 2023, 10:00 AM</span></p>
+                                    <p><strong>Drop-off:</strong> <span id="dropoff-summary">Mumbai, 18 Mar 2023, 10:00 AM</span></p>
+                                    <p><strong>Total Amount Paid:</strong> <span id="amount-paid">₹14,868</span></p>
+                                </div>
+                                <div class="next-steps">
+                                    <h4>Next Steps</h4>
+                                    <ol>
+                                        <li>Arrive at the pickup location on time with your driving license.</li>
+                                        <li>Inspect the car with the owner before starting your journey.</li>
+                                        <li>Return the car at the agreed drop-off location on time.</li>
+                                    </ol>
+                                </div>
+                                <div class="confirmation-actions">
+                                    <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                                    <button type="button" class="btn btn-primary" id="download-receipt">Download Receipt</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>VSS</h2>
+                    <p>Drive Your Way</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="rent-car.html">Rent a Car</a></li>
+                            <li><a href="list-car.html">List Your Car</a></li>
+                            <li><a href="how-it-works.html">How It Works</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Safety Center</a></li>
+                            <li><a href="#">Community Guidelines</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Insurance Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 VSS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Booking page specific JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            // Get all step buttons
+            const nextButtons = document.querySelectorAll('.next-step');
+            const prevButtons = document.querySelectorAll('.prev-step');
+            const steps = document.querySelectorAll('.booking-steps .step');
+            const formSteps = document.querySelectorAll('.form-step');
+            
+            // Add event listeners to next buttons
+            nextButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Find the current active step
+                    const currentStep = document.querySelector('.form-step.active');
+                    const currentIndex = Array.from(formSteps).indexOf(currentStep);
+                    
+                    // Hide current step
+                    currentStep.classList.remove('active');
+                    steps[currentIndex].classList.remove('active');
+                    
+                    // Show next step
+                    formSteps[currentIndex + 1].classList.add('active');
+                    steps[currentIndex + 1].classList.add('active');
+                    
+                    // Scroll to top of the form
+                    window.scrollTo({
+                        top: document.querySelector('.booking-section').offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Add event listeners to previous buttons
+            prevButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Find the current active step
+                    const currentStep = document.querySelector('.form-step.active');
+                    const currentIndex = Array.from(formSteps).indexOf(currentStep);
+                    
+                    // Hide current step
+                    currentStep.classList.remove('active');
+                    steps[currentIndex].classList.remove('active');
+                    
+                    // Show previous step
+                    formSteps[currentIndex - 1].classList.add('active');
+                    steps[currentIndex - 1].classList.add('active');
+                    
+                    // Scroll to top of the form
+                    window.scrollTo({
+                        top: document.querySelector('.booking-section').offsetTop,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+            
+            // Payment method toggle
+            const paymentMethods = document.querySelectorAll('input[name="payment-method"]');
+            const paymentForms = document.querySelectorAll('.payment-form');
+            
+            paymentMethods.forEach(method => {
+                method.addEventListener('change', function() {
+                    // Hide all payment forms
+                    paymentForms.forEach(form => {
+                        form.style.display = 'none';
+                    });
+                    
+                    // Show selected payment form
+                    const selectedForm = document.getElementById(`${this.id}-form`);
+                    if (selectedForm) {
+                        selectedForm.style.display = 'block';
+                    }
+                });
+            });
+            
+            // Get car ID from URL parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const carId = urlParams.get('car');
+            
+            // In a real application, you would fetch car details from a database
+            // For now, we'll just use the default car details already in the HTML
+            
+            // Format card number with spaces
+            const cardNumberInput = document.getElementById('card-number');
+            if (cardNumberInput) {
+                cardNumberInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
+                    let formattedValue = '';
+                    
+                    for (let i = 0; i < value.length; i++) {
+                        if (i > 0 && i % 4 === 0) {
+                            formattedValue += ' ';
+                        }
+                        formattedValue += value[i];
+                    }
+                    
+                    e.target.value = formattedValue;
+                });
+            }
+            
+            // Format expiry date
+            const expiryDateInput = document.getElementById('expiry-date');
+            if (expiryDateInput) {
+                expiryDateInput.addEventListener('input', function(e) {
+                    let value = e.target.value.replace(/\D/g, '');
+                    
+                    if (value.length > 2) {
+                        value = value.substring(0, 2) + '/' + value.substring(2, 4);
+                    }
+                    
+                    e.target.value = value;
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

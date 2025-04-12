@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VSS - Car Rental Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>VSS</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="rent-car.html">Rent a Car</a></li>
+                    <li><a href="list-car.html">List Your Car</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Vehicle Sharing System</h1>
+                <p>Rent a car or earn money by listing your vehicle on VSS</p>
+                <div class="hero-buttons">
+                    <a href="rent-car.html" class="btn btn-primary">Rent a Car</a>
+                    <a href="list-car.html" class="btn btn-secondary">List Your Car</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="rent-car" class="rent-car">
+        <div class="container">
+            <h2 class="section-title">Rent a Car</h2>
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Enter your location">
+                </div>
+                <div class="filter-group">
+                    <label for="car-type">Vehicle Type</label>
+                    <select id="car-type">
+                        <option value="">All Types</option>
+                        <option value="motorcycle">Motorcycle</option>
+                        <option value="hatchback">Hatchback</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="luxury">Luxury</option>
+                        <option value="sports">Sports</option>
+                    </select>
+                </div>
+                <a href="rent-car.html" class="btn btn-primary">Search</a>
+            </div>
+
+            <div class="featured-cars">
+                <h3>Featured Cars</h3>
+                <div class="car-listings">
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="img/cars/Toyota_Camry.png" alt="Toyota Camry">
+                        </div>
+                        <div class="car-details">
+                            <div class="car-title">
+                                <h3>Toyota Camry</h3>
+                                <span class="car-price">₹3,500/day</span>
+                            </div>
+                            <div class="car-info">
+                                <span>2022</span>
+                                <span>Sedan</span>
+                                <span>Mumbai</span>
+                            </div>
+                            <div class="car-features">
+                                <span class="feature">Automatic</span>
+                                <span class="feature">Bluetooth</span>
+                                <span class="feature">Backup Camera</span>
+                            </div>
+                            <div class="car-actions">
+                                <a href="booking.html?car=1" class="btn btn-primary">Rent Now</a>
+                                <button class="btn view-details-btn" data-id="1">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="img/cars/Honda_CR-V.png" alt="Honda CR-V">
+                        </div>
+                        <div class="car-details">
+                            <div class="car-title">
+                                <h3>Honda CR-V</h3>
+                                <span class="car-price">₹4,200/day</span>
+                            </div>
+                            <div class="car-info">
+                                <span>2021</span>
+                                <span>SUV</span>
+                                <span>Delhi</span>
+                            </div>
+                            <div class="car-features">
+                                <span class="feature">AWD</span>
+                                <span class="feature">Sunroof</span>
+                                <span class="feature">Apple CarPlay</span>
+                            </div>
+                            <div class="car-actions">
+                                <a href="booking.html?car=2" class="btn btn-primary">Rent Now</a>
+                                <button class="btn view-details-btn" data-id="2">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="car-card">
+                        <div class="car-image">
+                            <img src="img/cars/Maruti Suzuki Swift.png" alt="Maruti Suzuki Swift">
+                        </div>
+                        <div class="car-details">
+                            <div class="car-title">
+                                <h3>Maruti Suzuki Swift</h3>
+                                <span class="car-price">₹1,800/day</span>
+                            </div>
+                            <div class="car-info">
+                                <span>2022</span>
+                                <span>Hatchback</span>
+                                <span>Kolkata</span>
+                            </div>
+                            <div class="car-features">
+                                <span class="feature">Fuel Efficient</span>
+                                <span class="feature">Compact</span>
+                                <span class="feature">Bluetooth</span>
+                            </div>
+                            <div class="car-actions">
+                                <a href="booking.html?car=7" class="btn btn-primary">Rent Now</a>
+                                <button class="btn view-details-btn" data-id="7">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="view-all-link">
+                    <a href="rent-car.html" class="btn btn-secondary">View All Cars</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="list-car" class="list-car">
+        <div class="container">
+            <h2 class="section-title">List Your Car</h2>
+            <p class="section-description">Earn money by renting out your car when you're not using it</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-rupee-sign"></i>
+                    </div>
+                    <h3>Earn Extra Income</h3>
+                    <p>Make up to ₹30,000 per month by renting out your car when you're not using it.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Insurance Coverage</h3>
+                    <p>Your car is protected with our comprehensive insurance policy during rentals.</p>
+                </div>
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3>Flexible Schedule</h3>
+                    <p>You decide when your car is available. Keep full control of your calendar.</p>
+                </div>
+            </div>
+            
+            <div class="cta-box">
+                <h3>Ready to start earning?</h3>
+                <a href="list-car.html" class="btn btn-primary">List Your Car Now</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Find a Car</h3>
+                    <p>Search for available cars in your area based on your preferences.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Book It</h3>
+                    <p>Reserve the car for your desired dates with secure online payment.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Drive Away</h3>
+                    <p>Pick up the car and enjoy your journey with our 24/7 roadside assistance.</p>
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="steps">
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>List Your Car</h3>
+                    <p>Create a detailed listing with photos and availability.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>Accept Bookings</h3>
+                    <p>Review and approve rental requests from verified users.</p>
+                </div>
+                <div class="step">
+                    <div class="step-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3>Get Paid</h3>
+                    <p>Earn money each time your car is rented with secure payments.</p>
+                </div>
+            </div>
+            
+            <div class="cta-box">
+                <h3>Want to learn more?</h3>
+                <a href="how-it-works.html" class="btn btn-primary">See Detailed Guide</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About VSS</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>VSS is a peer-to-peer car rental marketplace that connects car owners with people who need a vehicle. Our mission is to make car rental more accessible, affordable, and sustainable.</p>
+                    <p>Founded in 2023, we've helped thousands of car owners earn extra income from their vehicles while providing renters with a wide variety of affordable options.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>5000+</h3>
+                            <p>Cars Listed</p>
+                        </div>
+                        <div class="stat">
+                            <h3>20000+</h3>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="stat">
+                            <h3>100+</h3>
+                            <p>Cities</p>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-secondary">Learn More About Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="img/cars/Audi A6.png" alt="Car rental">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"VSS made it so easy to rent out my car when I'm not using it. I've made over ₹50,000 in just three months!"</p>
+                        <div class="testimonial-author">
+                            <h4>Rahul D.</h4>
+                            <p>Car Owner</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"I needed a car for a weekend trip and found the perfect SUV on VSS. The process was smooth and much cheaper than traditional rental companies."</p>
+                        <div class="testimonial-author">
+                            <h4>Priya M.</h4>
+                            <p>Renter</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"The variety of cars available on VSS is impressive. I was able to rent a luxury car for my anniversary at a fraction of the usual cost."</p>
+                        <div class="testimonial-author">
+                            <h4>Vikram T.</h4>
+                            <p>Renter</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>VSS</h2>
+                    <p>Drive Your Way</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="rent-car.html">Rent a Car</a></li>
+                            <li><a href="list-car.html">List Your Car</a></li>
+                            <li><a href="how-it-works.html">How It Works</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Safety Center</a></li>
+                            <li><a href="#">Community Guidelines</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Insurance Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 VSS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

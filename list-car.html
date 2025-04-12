@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Your Car - VSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>VSS</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rent-car.html">Rent a Car</a></li>
+                    <li><a href="list-car.html" class="active">List Your Car</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>List Your Car</h1>
+            <p>Earn money by renting out your car when you're not using it</p>
+        </div>
+    </section>
+
+    <section class="list-car">
+        <div class="container">
+            <div class="benefits">
+                <h2 class="section-title">Why List Your Car With VSS?</h2>
+                <div class="benefits-grid">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-rupee-sign"></i>
+                        </div>
+                        <h3>Earn Extra Income</h3>
+                        <p>Make up to ₹30,000 per month by renting out your car when you're not using it.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Insurance Coverage</h3>
+                        <p>Your car is protected with our comprehensive insurance policy during rentals.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>Flexible Schedule</h3>
+                        <p>You decide when your car is available. Keep full control of your calendar.</p>
+                    </div>
+                    <div class="benefit-card">
+                        <div class="benefit-icon">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3>Verified Renters</h3>
+                        <p>All renters are verified with ID, driving license, and background checks.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="listing-form">
+                <h2 class="section-title">List Your Car</h2>
+                <form id="car-listing-form">
+                    <div class="form-section">
+                        <h3>Car Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="car-make">Car Make</label>
+                                <input type="text" id="car-make" required placeholder="e.g., Toyota">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-model">Car Model</label>
+                                <input type="text" id="car-model" required placeholder="e.g., Camry">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="car-year">Year</label>
+                                <input type="number" id="car-year" required placeholder="e.g., 2020">
+                            </div>
+                            <div class="form-group">
+                                <label for="car-category">Category</label>
+                                <select id="car-category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="motorcycle">Motorcycle</option>
+                                    <option value="hatchback">Hatchback</option>
+                                    <option value="sedan">Sedan</option>
+                                    <option value="suv">SUV</option>
+                                    <option value="luxury">Luxury</option>
+                                    <option value="sports">Sports</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="license-plate">License Plate Number</label>
+                                <input type="text" id="license-plate" required placeholder="e.g., MH01AB1234">
+                            </div>
+                            <div class="form-group">
+                                <label for="seating-capacity">Seating Capacity</label>
+                                <input type="number" id="seating-capacity" required min="2" max="10" placeholder="e.g., 5">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="fuel-type">Fuel Type</label>
+                                <select id="fuel-type" required>
+                                    <option value="">Select Fuel Type</option>
+                                    <option value="petrol">Petrol</option>
+                                    <option value="diesel">Diesel</option>
+                                    <option value="electric">Electric</option>
+                                    <option value="hybrid">Hybrid</option>
+                                    <option value="cng">CNG</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="transmission">Transmission</label>
+                                <select id="transmission" required>
+                                    <option value="">Select Transmission</option>
+                                    <option value="manual">Manual</option>
+                                    <option value="automatic">Automatic</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Rental Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="daily-rate">Daily Rate (₹)</label>
+                                <input type="number" id="daily-rate" required placeholder="e.g., 2000">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" required placeholder="e.g., Mumbai">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-description">Description</label>
+                            <textarea id="car-description" rows="4" required placeholder="Describe your car, its condition, special features, etc."></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Car Features</h3>
+                        <div class="features-grid">
+                            <div class="feature-checkbox">
+                                <input type="checkbox" id="feature-ac">
+                                <label for="feature-ac">Air Conditioning</label>
+                            </div>
+                            <div class="feature-checkbox">
+                                <input type="checkbox" id="feature-bluetooth">
+                                <label for="feature-bluetooth">Bluetooth</label>
+                            </div>
+                            <div class="feature-checkbox">
+                                <input type="checkbox" id="feature-gps">
+                                <label for="feature-gps">GPS Navigation</label>
+                            </div>
+                            <div class="feature-checkbox">
+                                <input type="checkbox" id="feature-sunroof">
+                                <label for="feature-sunroof">Sunroof</label>
+                            </div>
+                            <div class="feature-checkbox">
+                                <input type="checkbox" id="feature-camera">
+                                <label for="feature-camera">Backup Camera</label>
+                            </div>
+                            <div class="feature-checkbox">
+                                <input type="checkbox" id="feature-leather">
+                                <label for="feature-leather">Leather Seats</label>
+                            </div>
+                            <div class="feature-checkbox">
+                                <input type="checkbox" id="feature-carplay">
+                                <label for="feature-carplay">Apple CarPlay</label>
+                            </div>
+                            <div class="feature-checkbox">
+                                <input type="checkbox" id="feature-android">
+                                <label for="feature-android">Android Auto</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Car Documents & Images</h3>
+                        <div class="form-group">
+                            <label for="car-registration">Registration Certificate (RC)</label>
+                            <input type="file" id="car-registration" accept="image/*,.pdf" required>
+                            <small>Upload a clear image or PDF of your car's registration certificate</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="insurance-doc">Insurance Document</label>
+                            <input type="file" id="insurance-doc" accept="image/*,.pdf" required>
+                            <small>Upload a clear image or PDF of your car's valid insurance</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="car-images">Car Images</label>
+                            <input type="file" id="car-images" accept="image/*" multiple required>
+                            <small>Upload at least 5 clear images of your car (exterior, interior, dashboard)</small>
+                        </div>
+                    </div>
+
+                    <div class="form-section">
+                        <h3>Owner Details</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="owner-name">Full Name</label>
+                                <input type="text" id="owner-name" required placeholder="e.g., Rahul Sharma">
+                            </div>
+                            <div class="form-group">
+                                <label for="owner-phone">Phone Number</label>
+                                <input type="tel" id="owner-phone" required placeholder="e.g., 9876543210">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="owner-email">Email Address</label>
+                                <input type="email" id="owner-email" required placeholder="e.g., rahul@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="owner-address">Address</label>
+                                <input type="text" id="owner-address" required placeholder="Your current address">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="owner-id">Government ID (Aadhar/PAN/Voter ID)</label>
+                            <input type="file" id="owner-id" accept="image/*,.pdf" required>
+                            <small>Upload a clear image or PDF of your government ID</small>
+                        </div>
+                    </div>
+
+                    <div class="form-section terms">
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="terms-agree" required>
+                            <label for="terms-agree">I agree to VSS's <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-large">Submit Car Listing</button>
+                </form>
+            </div>
+
+            <div class="listing-faq">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How much can I earn by listing my car?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Your earnings depend on your car's make, model, condition, and location. On average, car owners on VSS earn between ₹15,000 to ₹30,000 per month. Luxury cars can earn even more.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Is my car protected during rentals?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Yes, all cars listed on VSS are covered by our comprehensive insurance policy during rental periods. This is in addition to your existing insurance and covers damages, accidents, and theft.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>Who can rent my car?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Only verified users with valid driving licenses can rent your car. We conduct thorough background checks on all renters. You also have the option to approve or decline rental requests.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>How do I get paid?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Payments are processed automatically after each rental period. The rental amount (minus our service fee) is transferred directly to your bank account within 24-48 hours after the rental ends.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>What if my car gets damaged?</h3>
+                            <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                        </div>
+                        <div class="faq-answer">
+                            <p>If your car is damaged during a rental, our insurance will cover the repairs. You'll need to report the damage within 24 hours of the rental ending, and we'll guide you through the claims process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>VSS</h2>
+                    <p>Drive Your Way</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="rent-car.html">Rent a Car</a></li>
+                            <li><a href="list-car.html">List Your Car</a></li>
+                            <li><a href="how-it-works.html">How It Works</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Safety Center</a></li>
+                            <li><a href="#">Community Guidelines</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Insurance Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 VSS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

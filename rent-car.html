@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rent a Car - VSS</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>VSS</h1>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="rent-car.html" class="active">Rent a Car</a></li>
+                    <li><a href="list-car.html">List Your Car</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="page-banner">
+        <div class="container">
+            <h1>Rent a Car</h1>
+            <p>Find the perfect car for your needs</p>
+        </div>
+    </section>
+
+    <section class="rent-car">
+        <div class="container">
+            <div class="search-filters">
+                <div class="filter-group">
+                    <label for="location">Location</label>
+                    <input type="text" id="location" placeholder="Enter your location">
+                </div>
+                <div class="filter-group">
+                    <label for="car-type">Vehicle Type</label>
+                    <select id="car-type">
+                        <option value="">All Types</option>
+                        <option value="motorcycle">Motorcycle</option>
+                        <option value="hatchback">Hatchback</option>
+                        <option value="sedan">Sedan</option>
+                        <option value="suv">SUV</option>
+                        <option value="luxury">Luxury</option>
+                        <option value="sports">Sports</option>
+                    </select>
+                </div>
+                <button id="search-btn" class="btn btn-primary">Search</button>
+            </div>
+
+            <div class="car-listings">
+                <!-- Car cards will be dynamically added here with JavaScript -->
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/cars/Toyota Camry.png" alt="Toyota Camry">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Toyota Camry</h3>d
+                            <span class="car-price">₹3,500/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2022</span>
+                            <span>Sedan</span>
+                            <span>Mumbai</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">Automatic</span>
+                            <span class="feature">Bluetooth</span>
+                            <span class="feature">Backup Camera</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=1" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="1">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/cars/Honda CR-V.png" alt="Honda CR-V">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Honda CR-V</h3>
+                            <span class="car-price">₹4,200/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2021</span>
+                            <span>SUV</span>
+                            <span>Delhi</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">AWD</span>
+                            <span class="feature">Sunroof</span>
+                            <span class="feature">Apple CarPlay</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=2" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="2">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/cars/BMW 5 Series.png" alt="BMW 5 Series">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>BMW 5 Series</h3>
+                            <span class="car-price">₹7,800/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2023</span>
+                            <span>Luxury</span>
+                            <span>Bangalore</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">Leather Seats</span>
+                            <span class="feature">Navigation</span>
+                            <span class="feature">Premium Sound</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=3" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="3">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/cars/Ford Mustang.png" alt="Ford Mustang">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Ford Mustang</h3>
+                            <span class="car-price">₹6,500/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2022</span>
+                            <span>Sports</span>
+                            <span>Chennai</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">V8 Engine</span>
+                            <span class="feature">Convertible</span>
+                            <span class="feature">Sport Mode</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=4" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="4">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/cars/Chevrolet Equinox.png" alt="Chevrolet Equinox">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Chevrolet Equinox</h3>
+                            <span class="car-price">₹3,800/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2021</span>
+                            <span>SUV</span>
+                            <span>Hyderabad</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">Spacious</span>
+                            <span class="feature">Fuel Efficient</span>
+                            <span class="feature">Android Auto</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=5" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="5">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/cars/Tesla Model 3.png" alt="Tesla Model 3">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Tesla Model 3</h3>
+                            <span class="car-price">₹5,900/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2023</span>
+                            <span>Sedan</span>
+                            <span>Pune</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">Electric</span>
+                            <span class="feature">Autopilot</span>
+                            <span class="feature">Long Range</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=6" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="6">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/cars/Maruti Suzuki Swift.png" alt="Maruti Suzuki Swift">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Maruti Suzuki Swift</h3>
+                            <span class="car-price">₹1,800/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2022</span>
+                            <span>Hatchback</span>
+                            <span>Kolkata</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">Fuel Efficient</span>
+                            <span class="feature">Compact</span>
+                            <span class="feature">Bluetooth</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=7" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="7">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/cars/Hyundai Creta.png" alt="Hyundai Creta">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Hyundai Creta</h3>
+                            <span class="car-price">₹2,900/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2022</span>
+                            <span>SUV</span>
+                            <span>Jaipur</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">Panoramic Sunroof</span>
+                            <span class="feature">Touchscreen</span>
+                            <span class="feature">Cruise Control</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=8" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="8">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/cars/Mahindra Thar.png" alt="Mahindra Thar">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Mahindra Thar</h3>
+                            <span class="car-price">₹4,500/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2023</span>
+                            <span>SUV</span>
+                            <span>Goa</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">4x4</span>
+                            <span class="feature">Convertible</span>
+                            <span class="feature">Adventure Ready</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=9" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="9">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/cars/Audi A6.png" alt="Audi A6">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Audi A6</h3>
+                            <span class="car-price">₹8,200/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2022</span>
+                            <span>Luxury</span>
+                            <span>Delhi</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">Premium Interior</span>
+                            <span class="feature">Virtual Cockpit</span>
+                            <span class="feature">Bang & Olufsen Sound</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=10" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="10">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/bikes/Royal Enfield Classic 350.png" alt="Royal Enfield Classic 350">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Royal Enfield Classic 350</h3>
+                            <span class="car-price">₹800/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2022</span>
+                            <span>Motorcycle</span>
+                            <span>Delhi</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">350cc</span>
+                            <span class="feature">Cruiser</span>
+                            <span class="feature">ABS</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=11" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="11">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/bikes/Bajaj Pulsar NS200.png" alt="Bajaj Pulsar NS200">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Bajaj Pulsar NS200</h3>
+                            <span class="car-price">₹600/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2023</span>
+                            <span>Motorcycle</span>
+                            <span>Mumbai</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">200cc</span>
+                            <span class="feature">Sports</span>
+                            <span class="feature">Fuel Efficient</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=12" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="12">View Details</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="car-card">
+                    <div class="car-image">
+                        <img src="img/bikes/Honda CB350.jpg" alt="Honda CB350">
+                    </div>
+                    <div class="car-details">
+                        <div class="car-title">
+                            <h3>Honda CB350</h3>
+                            <span class="car-price">₹900/day</span>
+                        </div>
+                        <div class="car-info">
+                            <span>2022</span>
+                            <span>Motorcycle</span>
+                            <span>Bangalore</span>
+                        </div>
+                        <div class="car-features">
+                            <span class="feature">350cc</span>
+                            <span class="feature">Modern Classic</span>
+                            <span class="feature">Bluetooth</span>
+                        </div>
+                        <div class="car-actions">
+                            <a href="booking.html?car=13" class="btn btn-primary">Rent Now</a>
+                            <button class="btn view-details-btn" data-id="13">View Details</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h2>VSS</h2>
+                    <p>Drive Your Way</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="rent-car.html">Rent a Car</a></li>
+                            <li><a href="list-car.html">List Your Car</a></li>
+                            <li><a href="how-it-works.html">How It Works</a></li>
+                            <li><a href="about.html">About Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Help Center</a></li>
+                            <li><a href="#">Safety Center</a></li>
+                            <li><a href="#">Community Guidelines</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Legal</h3>
+                        <ul>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Insurance Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-social">
+                    <h3>Connect With Us</h3>
+                    <div class="social-icons">
+                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 VSS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
